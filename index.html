@@ -1216,7 +1216,7 @@ let TAB="home", SUB=null, ANIM=true;
 function go(tab,sub){if(tab!==TAB||(sub||null)!==SUB)ANIM=true;TAB=tab;SUB=sub||null;buzz(6);render();window.scrollTo(0,0);}
 function render(){
   const v=$("#view");
-  if(!Store.session){ME="";$("#who").hidden=true;document.body.classList.toggle("oninv",!INVSEEN);if(INVSEEN)viewLogin(v);else viewInvite(v);
+  if(!INVSEEN||!Store.session){ME=Store.session?Store.session.name:"";$("#who").hidden=true;document.body.classList.toggle("oninv",!INVSEEN);if(INVSEEN)viewLogin(v);else viewInvite(v);
     if(ANIM){ANIM=false;v.classList.remove("enter");void v.offsetWidth;v.classList.add("enter");}return;}
   document.body.classList.remove("oninv");
   ME=Store.session.name; $("#who").hidden=false; $("#who").innerHTML=avatar(ME,30)+`<span>${esc(ME)}</span>`;
@@ -1339,6 +1339,7 @@ function joinNotes(d){
 let INVSEEN=false;
 function viewInvite(v){
   v.innerHTML=inviteHTML(true);
+  if(Store.session){const g=$("#gatego");g.textContent=myAns()?"Bekijk je antwoorden →":"Verder met de vragen →";const h=v.querySelector(".o-hint");if(h)h.textContent="Ingelogd als "+Store.session.name;}
   $("#gatego").addEventListener("click",()=>{INVSEEN=true;buzz(10);ANIM=true;render();window.scrollTo(0,0);});
 }
 /* ================= inloggen ================= */
