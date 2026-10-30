@@ -893,6 +893,55 @@ input[type=text],input[type=password]{background:var(--well);border:1px solid va
 .tixbox img{width:100%;height:auto;display:block;border-radius:12px;filter:drop-shadow(0 12px 24px rgba(0,0,0,.5))}
 .tixbtns{display:flex;gap:8px}.tixbtns .btn{flex:1}
 .login .card{border:0!important;background:none!important;box-shadow:none!important;padding:0!important}
+
+/* ===== telefoon: compacter ===== */
+@media (max-width:520px){
+  html{font-size:15px}
+  main{gap:14px!important;padding-left:14px!important;padding-right:14px!important}
+  .site-top{padding:calc(10px + env(safe-area-inset-top,0px)) 14px 8px}
+  .brand{font-size:.92rem;gap:8px}.brand img{width:26px;height:26px}
+  #who{font-size:.8rem;padding:3px 12px 3px 3px}#who .av{--s:26px!important}
+  .o-start{gap:16px;padding-top:2px}
+  .o-eyebrow{font-size:.62rem;padding:5px 10px}
+  .o-pre{font-size:1.05rem;margin-top:2px}
+  .o-big{font-size:clamp(5.6rem,33vw,8.5rem)}
+  .o-sticker{font-size:.8rem;padding:6px 10px;top:52%}
+  .o-intro{font-size:.98rem;line-height:1.5}
+  .o-main{padding:14px 14px 12px;gap:9px}
+  .o-head b{font-size:1.02rem}.o-head span{font-size:.58rem}
+  .o-facts{gap:9px 12px}.o-facts dt{font-size:.58rem}.o-facts dd{font-size:.84rem;line-height:1.3}
+  .o-ticket{grid-template-columns:1fr 52px;border-radius:16px}
+  .o-ticket::before,.o-ticket::after{right:40px;width:20px;height:20px}.o-ticket::before{top:-10px}.o-ticket::after{bottom:-10px}
+  .o-adm{font-size:.66rem}.o-barcode{width:26px;height:54px}.o-code{font-size:.52rem}
+  .o-go{font-size:1.02rem;padding:15px 18px;border-radius:15px}
+  .o-hint{font-size:.8rem}
+  .login{gap:10px;padding-top:6px}.login h1{font-size:1.35rem}.login-mark{width:64px;height:64px}
+  .ph h1{font-size:1.4rem}.ph p{font-size:.9rem}
+  .wiz-top{min-height:30px}.wiz-n{font-size:.76rem}
+  .wiz-step{gap:4px}.wiz-step h1{font-size:1.35rem}.wiz-step .muted{font-size:.88rem}
+  .wiz-body{gap:10px;margin-top:6px}
+  .wiz-body .wkrow{padding:12px}.wkrow b{font-size:.95rem}
+  .seg3 button{padding:8px 4px;font-size:.82rem}
+  .ocards.big{gap:8px}.ocards.big .ocard{padding:11px 12px;gap:12px}.ocards.big .oi{width:38px;height:38px;font-size:1.15rem;border-radius:12px}
+  .ocard b{font-size:.88rem}.ocard small{font-size:.74rem}
+  .chips2{gap:6px}.chipbtn{font-size:.8rem;padding:6px 12px}
+  label.f{font-size:.84rem;gap:5px}
+  input[type=text],input[type=password]{padding:11px 13px!important;font-size:16px}
+  .alcnote{font-size:.8rem;padding:11px}
+  .wiz-foot{padding-top:16px}.wiz-foot .btn{padding:13px;font-size:.95rem}
+  .wiz-step{padding-bottom:96px}
+  .fgroup{padding:13px;gap:9px;border-radius:18px}.fgroup h3{font-size:.92rem}
+  .sumrow{font-size:.84rem;padding:8px 2px}
+  .hero2{padding:14px;gap:10px;border-radius:20px}.hero2 h1{font-size:1.1rem!important}
+  .vopts{gap:8px}.vopt{padding:11px;gap:4px;border-radius:15px}.vopt b{font-size:.86rem}.vnum{font-size:1.5rem}.vnum small{font-size:.72rem}
+  .vfoot{font-size:.74rem}
+  .hero2 .btn,.fgroup .btn{padding:11px 14px;font-size:.88rem}
+  .atile{padding:12px}.atile b{font-size:.9rem}
+  .tixbtns .btn{font-size:.86rem}
+  #toast{font-size:.86rem;padding:9px 15px}
+}
+#toast{top:calc(62px + env(safe-area-inset-top,0px))!important;bottom:auto!important;transform:translate(-50%,-16px) scale(.92)}
+#toast.show{transform:translate(-50%,0) scale(1)}
 </style>
 </head>
 <body>
